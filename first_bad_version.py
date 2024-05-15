@@ -6,11 +6,11 @@ class Solution:
         start = 1
         end = n
 
-        while start + 1 < end:
+        while start < end:
             pointer = (end + start) // 2
             if isBadVersion(pointer):
                 end = pointer
             else:
-                start = pointer
+                start = pointer + 1
         return end
 
